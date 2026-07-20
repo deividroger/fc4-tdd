@@ -27,7 +27,7 @@ export class BookingService {
       throw new Error("Usuário não encontrado.");
     }
 
-    const dateRange = new DateRange(dto.startDate, dto.endDate); // altamente acoplado precisa de mock
+    const dateRange = new DateRange(dto.startDate, dto.endDate);
 
     const booking = new Booking(
       uuidv4(),
