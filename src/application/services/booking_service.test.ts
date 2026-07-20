@@ -45,7 +45,8 @@ describe("BookingService", () => {
     } as any;
 
     const mockUser = {
-      getId: jest.fn().mockReturnValue("1"),
+      id: jest.fn().mockReturnValue("1"),
+      name: jest.fn().mockReturnValue("John Doe")
     } as any;
 
     mockPropertyService.findPropertyById.mockResolvedValue(mockProperty);
@@ -117,7 +118,8 @@ describe("BookingService", () => {
     } as any;
 
     const mockUser = {
-      getId: jest.fn().mockReturnValue("1"),
+      id: jest.fn().mockReturnValue("1"),
+      name: jest.fn().mockReturnValue("John Doe")
     } as any;
 
     mockPropertyService.findPropertyById.mockResolvedValue(mockProperty);
@@ -155,7 +157,8 @@ describe("BookingService", () => {
     } as any;
 
     const mockUser = {
-      getId: jest.fn().mockReturnValue("1"),
+      id: jest.fn().mockReturnValue("1"),
+      name: jest.fn().mockReturnValue("John Doe")
     } as any;
 
     mockPropertyService.findPropertyById.mockResolvedValue(mockProperty);

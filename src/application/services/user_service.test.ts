@@ -18,8 +18,8 @@ describe("UserService", () => {
   it("deve retornar um usuário quando um ID váilido for fornecido", async () => {
     const user = await userService.findUserById("1");
     expect(user).not.toBeNull();
-    expect(user?.getId()).toBe("1");
-    expect(user?.getName()).toBe("John Doe");
+    expect(user?.id).toBe("1");
+    expect(user?.name).toBe("John Doe");
   });
 
   it("deve salvar um novo usuário com sucesso usando repositorio fake e buscando novamente", async () => {
@@ -28,7 +28,7 @@ describe("UserService", () => {
 
     const user = await userService.findUserById("3");
     expect(user).not.toBeNull();
-    expect(user?.getId()).toBe("3");
-    expect(user?.getName()).toBe("Test User");
+    expect(user?.id).toBe("3");
+    expect(user?.name).toBe("Test User");
   });
 });

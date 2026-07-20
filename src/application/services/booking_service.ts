@@ -1,4 +1,5 @@
 import { Booking } from "../../domain/entities/booking";
+import { UserMappers } from "../../infrastructure/persistence/mappers/user_mappers";
 import { BookingRepository } from "../../domain/repositories/booking_repository";
 import { DateRange } from "../../domain/value_objects/date_range";
 import { CreateBookingDTO } from "../dtos/create_booking_dto";
@@ -31,7 +32,7 @@ export class BookingService {
     const booking = new Booking(
       uuidv4(),
       property,
-      guest,
+      UserMappers.toDomain(guest),
       dateRange,
       dto.guestCount
     );

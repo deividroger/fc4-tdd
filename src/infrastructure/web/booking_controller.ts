@@ -52,7 +52,7 @@ export class BookingController {
 
   async cancelBooking(req: Request, res: Response): Promise<Response> {
     try {
-      const bookingId = req.params.id;
+      const bookingId = req.params.id.toString();
       await this.bookingService.cancelBooking(bookingId);
 
       return res
